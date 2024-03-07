@@ -6,6 +6,7 @@
   - gateway api is a "standard" core feature for k8s - https://gateway-api.sigs.k8s.io/
 
 <br/>
+
 #### gatewayClassName: gke-l7-global-external-managed
 
 `needed gatewayClassName to be able to do cross namespace routing in GKE`
