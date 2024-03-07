@@ -10,20 +10,31 @@ Purpose of this is to use gw api, to replace ingress + svc mesh, to provision an
 
 #### Namespace live-store
 
-`This is where the "Live" site will run in /live if merged from dev`
+`Production version deploys whenever a merge is made to main/prod branch`
 
 
 #### Namespace dev
 
-`this is where the "dev" site will run in /dev if deployed/merged from feature/branch`
+`Dev version is used for everyday development, it deploys whenever a merge is made to dev branch`
 
 
-#### Canary deployment scenario wherein you are rolling out new features `(slowly / by weight)`
+#### Header based canary deployment `(namespace canary)`
+
+`Header-based canarying lets the service owner match synthetic test traffic that does not come from real users. This is an easy way of validating that the basic features of the application is functioning without exposing users directly`
+
+` (this is not fully implemented yet as i cannot get the gke-l7-global-external-managed-mc to deploy, as it needs a premier tier account type ) but the functionality is already done` 
 
 
 ### TODO
-`considering using flagger or argo rollouts/argo cd for drift detection`
-`setting up prometheus+grafana+ loki to completely cover and monitor ALL deployments`
++ short term: integrating the current working github actions build and deploy
+
++ considering using flagger or argo rollouts/argo cd for `drift detection`
+  - https://docs.flagger.app/tutorials/gatewayapi-progressive-delivery
+  - https://argoproj.github.io/argo-rollouts/features/canary/
+  
+
++ setting up prometheus+grafana+ loki to completely cover and monitor ALL deployments
+
 
 ---
 
@@ -40,7 +51,6 @@ Purpose of this is to use gw api, to replace ingress + svc mesh, to provision an
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Charles-Pogi-blue)
 
 ## Network infrastructure overview
