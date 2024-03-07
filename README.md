@@ -44,6 +44,14 @@
 
 <br/>
 
+
+## Network infrastructure overview
+
+
+
+![Logo](https://github.com/misua/progressive-deployment-template/blob/main/base.drawio.png)
+<br/>
+
 ---
 
 ## Authors
@@ -60,12 +68,6 @@
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
 ![Static Badge](https://img.shields.io/badge/Charles-Pogi-blue)
-
-## Network infrastructure overview
-
-
-
-![Logo](https://github.com/misua/progressive-deployment-template/blob/main/base.drawio.png)
 
 
 
