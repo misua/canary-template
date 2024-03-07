@@ -21,7 +21,7 @@
 
 #### Namespace dev
 
-`Dev version is used for everyday development, it deploys whenever a merge is made to dev branch`
+`Dev version can be used for everyday "live view" development testing, it deploys whenever a merge is made to dev branch`
 
 <br/>
 
@@ -30,7 +30,7 @@
 `Header-based canarying lets the service owner match synthetic test traffic that does not come from real users. This is an easy way of validating that the basic features of the application is functioning without exposing users directly`
 <br/><br/>
 > [!CAUTION]
-> (this is not fully implemented yet as i cannot get the gke-l7-global-external-managed-mc to deploy, as it needs a premier tier account type ) but the functionality is already done
+> (weighted routing is not fully implemented yet as i cannot get the gke-l7-global-external-managed-mc to deploy, as it needs a `premier tier` account type ) but the functionality is already done on our end
 
 <br/>
 
