@@ -5,35 +5,30 @@
   - (can be used in aws,azure too)
   - gateway api is a "standard" core feature for k8s - https://gateway-api.sigs.k8s.io/
 
-
-
-
-
-
-
+<br/>
 #### gatewayClassName: gke-l7-global-external-managed
 
 `needed gatewayClassName to be able to do cross namespace routing in GKE`
 
-
+<br/>
 #### Namespace live-store
 
 `Production version deploys whenever a merge is made to main/prod branch`
 
-
+<br/>
 #### Namespace dev
 
 `Dev version is used for everyday development, it deploys whenever a merge is made to dev branch`
 
-
+<br/>
 #### Header based canary deployment `(namespace canary)`
 
 `Header-based canarying lets the service owner match synthetic test traffic that does not come from real users. This is an easy way of validating that the basic features of the application is functioning without exposing users directly`
-
+<br/><br/>
 > [!CAUTION]
 > (this is not fully implemented yet as i cannot get the gke-l7-global-external-managed-mc to deploy, as it needs a premier tier account type ) but the functionality is already done
 
-
+<br/>
 ### TODO
 + [x] short term: integrating the current working github actions build and deploy
 
@@ -44,7 +39,7 @@
 
 + [ ] long term: setting up prometheus+grafana+ loki to completely cover and monitor ALL deployments
 
-
+<br/>
 ---
 
 ## Authors
