@@ -1,6 +1,6 @@
 
-# Gateway API implementation in GKE 
-#### _Purpose - to replace separate ingress + svc mesh, to provision and use just 1 load balancer for `ALL` environments, Live/Dev & canary,`(and exposing lots of svcs/APIs)` saving huge load balancer costs_
+# Gateway API implementation in GKE <sup>see image below</sup>
+#### Purpose - to replace separate ingress + svc mesh, to provision and use just 1 load balancer for `ALL` environments, Live/Dev & canary,`(and exposing lots of svcs/APIs)` saving _huge_ load balancer costs.
 
   - (can be used in aws,azure too)
   - gateway api is a "standard" core feature for k8s - https://gateway-api.sigs.k8s.io/
@@ -10,19 +10,16 @@
 #### gatewayClassName: gke-l7-global-external-managed
 
 `needed gatewayClassName to be able to do cross namespace routing in GKE`
-
 <br/>
 
 #### Namespace live-store
 
 `Production version deploys whenever a merge is made to main/prod branch`
-
 <br/>
 
 #### Namespace dev
 
 `Dev version can be used for everyday "live view" development testing, it deploys whenever a merge is made to dev branch`
-
 <br/>
 
 #### Header based canary deployment `(namespace canary)`
