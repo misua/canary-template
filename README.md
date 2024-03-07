@@ -1,6 +1,6 @@
 
 # Gateway API implementation in GKE 
-### Purpose of this is to use gw api, to replace ingress + svc mesh, to provision and use 1 load balancer for all environments, Live,dev and canary, saving load balancer costs
+### Purpose of this is to use GW Api, to replace ingress + svc mesh, to provision and use 1 load balancer for all environments, Live,dev and canary,(and exposing lots of svcs/APIs) saving huge load balancer costs
 
   - (can be used in aws,azure too)
   - gateway api is a "standard" core feature for k8s - https://gateway-api.sigs.k8s.io/
@@ -30,11 +30,12 @@
 `Header-based canarying lets the service owner match synthetic test traffic that does not come from real users. This is an easy way of validating that the basic features of the application is functioning without exposing users directly`
 <br/><br/>
 > [!CAUTION]
-> (weighted routing is not fully implemented yet as i cannot get the gke-l7-global-external-managed-mc to deploy, as it needs a `premier tier` account type ) but the functionality is already done on our end
+> (weighted routing is not fully implemented yet as i cannot get the `gke-l7-global-external-managed-mc` gw class to deploy, as it needs a `premier tier` account type ) but the functionality is already done on our end
 
 <br/>
 
-### TODO
+### Next steps
+
 + [x] short term: integrating the current working github actions build and deploy
 
 + [ ] long term: considering using flagger or argo rollouts/argo cd for `drift detection`
