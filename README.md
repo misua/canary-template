@@ -1,6 +1,6 @@
 
 # Gateway API implementation in GKE 
-### Purpose of this is to use GW Api, to replace ingress + svc mesh, to provision and use 1 load balancer for all environments, Live,dev and canary,(and exposing lots of svcs/APIs) saving huge load balancer costs
+### Purpose - to replace separate ingress + svc mesh, to provision and use just 1 load balancer for `ALL` environments, Live/Dev & canary,`(and exposing lots of svcs/APIs)` saving huge load balancer costs
 
   - (can be used in aws,azure too)
   - gateway api is a "standard" core feature for k8s - https://gateway-api.sigs.k8s.io/
