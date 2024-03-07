@@ -7,22 +7,22 @@
 
 <br/>
 
-#### gatewayClassName: gke-l7-global-external-managed
+##### gatewayClassName: gke-l7-global-external-managed
 
 `needed gatewayClassName to be able to do cross namespace routing in GKE`
 <br/>
 
-#### Namespace live-store
+##### Namespace live-store
 
 `Production version deploys whenever a merge is made to main/prod branch`
 <br/>
 
-#### Namespace dev
+##### Namespace dev
 
 `Dev version can be used for everyday "live view" development testing, it deploys whenever a merge is made to dev branch`
 <br/>
 
-#### Header based canary deployment `(namespace canary)`
+##### Header based canary deployment `(namespace canary)`
 
 `Header-based canarying lets the service owner match synthetic test traffic that does not come from real users. This is an easy way of validating that the basic features of the application is functioning without exposing users directly`
 <br/><br/>
