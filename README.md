@@ -36,6 +36,7 @@
 + [x] short term: integrating the current working github actions build and deploy
 
 + [ ] long term: considering using flagger or argo rollouts/argo cd for `drift detection`
+
       - https://docs.flagger.app/tutorials/gatewayapi-progressive-delivery
       - https://argoproj.github.io/argo-rollouts/features/canary/
   
