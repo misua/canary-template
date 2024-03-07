@@ -1,0 +1,8 @@
+kind: ServiceImport
+apiVersion: net.gke.io/v1
+metadata:
+  name: app-svc-2
+  namespace: live-store
+spec:
+  backendService: app-svc-2
+  port: 80

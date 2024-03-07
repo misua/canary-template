@@ -1,0 +1,24 @@
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1beta1
+metadata:
+  name: app-route
+  namespace: canary
+spec:
+  parentRefs:
+  - name: external-gateway
+    namespace: store
+  rules:
+  - matches:
+    - headers:
+      - name: env
+        value: canary
+    backendRefs:
+    - name: app-svc-3
+      port: 80
+    filters:
+      - type: URLRewrite
+        urlRewrite:
+          path:
+            type: ReplacePrefixMatch
+            replacePrefixMatch: /
+ 
