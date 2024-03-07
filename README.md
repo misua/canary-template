@@ -7,6 +7,10 @@
 
 
 
+
+
+
+
 #### gatewayClassName: gke-l7-global-external-managed
 
 `needed gatewayClassName to be able to do cross namespace routing in GKE`
@@ -26,18 +30,19 @@
 
 `Header-based canarying lets the service owner match synthetic test traffic that does not come from real users. This is an easy way of validating that the basic features of the application is functioning without exposing users directly`
 
-` (this is not fully implemented yet as i cannot get the gke-l7-global-external-managed-mc to deploy, as it needs a premier tier account type ) but the functionality is already done` 
+> [!CAUTION]
+> (this is not fully implemented yet as i cannot get the gke-l7-global-external-managed-mc to deploy, as it needs a premier tier account type ) but the functionality is already done
 
 
 ### TODO
-+ short term: integrating the current working github actions build and deploy
++ [x] short term: integrating the current working github actions build and deploy
 
-+ considering using flagger or argo rollouts/argo cd for `drift detection`
-  - https://docs.flagger.app/tutorials/gatewayapi-progressive-delivery
-  - https://argoproj.github.io/argo-rollouts/features/canary/
++ [ ] long term: considering using flagger or argo rollouts/argo cd for `drift detection`
+      - https://docs.flagger.app/tutorials/gatewayapi-progressive-delivery
+      - https://argoproj.github.io/argo-rollouts/features/canary/
   
 
-+ setting up prometheus+grafana+ loki to completely cover and monitor ALL deployments
++ [ ] long term: setting up prometheus+grafana+ loki to completely cover and monitor ALL deployments
 
 
 ---
